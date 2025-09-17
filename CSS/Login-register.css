@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Caprasimo", serif;
+}
+
+.bodyloginregister {
+    background-image: url(../Images/Fondo1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedorloginregister {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.Caja_trasera{
+    width: 100%;
+    padding: 10px 20px; /* padding abajo arriba y iziquierda derecha */
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(55, 15, 84, 0.5);
+}
+
+.Caja_trasera div {
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.Caja_trasera div p,
+.Caja_trasera div button{
+    margin-top: 30px;
+}
+
+.Caja_trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.Caja_trasera div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.Caja_trasera button{
+    padding: 10px 40px;
+    border: 2px solid black;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 2px 2px 1px;
+    outline: none;
+    transition: all 300ms;
+    background: rgb(94, 12, 94);
+}
+
+.Caja_trasera button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(94, 12, 94);
+}
+
+/*Formularios*/
+
+.Contenedor_login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -210px;
+    left: 10px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.Contenedor_login-register form{
+    width: 100%;
+    padding: 105px 20px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.Formulario_login{
+    background-image: image url(../Images/Fondo2.jpg);
+    background: url(../Images/Fondo2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    opacity: 1;
+    display: block;
+}
+
+.Formulario_register{
+    background-image: image url(../Images/Fondo3.jpg);
+    background: url(../Images/Fondo3.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    display: none;
+}
+
+.Contenedor_login-register form h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(249, 249, 249);
+    text-shadow: rgb(0, 0, 0) 1px -1.5px 1px;
+    text-decoration-line: underline;
+}
+
+.Contenedor_login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #d1cece;
+    font-size: 16px;
+    outline: none;
+}
+
+.Contenedor_login-register form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: rgb(94, 12, 94);
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/*Responsive design*/
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+    .Caja_trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .Caja_trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+    /*Formulario*/
+
+    .Contenedor_login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .Contenedor_login-register form{
+        position: relative;
+    }
+}

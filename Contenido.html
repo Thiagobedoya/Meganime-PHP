@@ -1,0 +1,56 @@
+<?php
+
+    session_start(); // Iniciar sesión para poder usar $_SESSION
+
+    if(!isset($_SESSION['usuario'])){
+        echo '
+            <script>
+                alert("Por favor debes iniciar sesión primero");
+                window.location = "index.php";
+            </script>
+            '; 
+            session_destroy(); // Destruir la sesión si el usuario no está autenticado
+            die();
+            
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meganime</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="CSS/Estilos.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="shortcut icon" href="Images/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="Images/">
+</head>
+<body class="body-contenido">
+    <nav class="navbar-fixed">  
+        <div class="contenedor-layout">
+            <img src="Images/Meganime 1.png" alt="Meganime" class="imagen-izquierda">
+                <div class="texto-derecha">
+                    <h1>MEGANIME</h1>
+                </div>
+        </div>
+
+</nav>
+
+<section class="Fondo_contenido">
+    <?php
+    $pagina_actual = basename($_SERVER['SCRIPT_NAME']);
+?>
+    <div class="botones"> 
+            <a href="Inicio.php" class="boton <?php if ($pagina_actual == 'Inicio.php') { echo 'activo'; } ?>" class =  >Inicio</a>
+            <a href="Productos.php" class="boton <?php if ($pagina_actual == 'Productos.php') { echo 'activo'; } ?>" >Productos</a>
+            <a href="#" class="boton <?php if ($pagina_actual == 'Contenido.php') { echo 'activo'; } ?>">Contenido</a>
+            <a href="#" class="boton <?php if ($pagina_actual == 'Comunidad.php') { echo 'activo'; } ?>">Comunidad</a>
+            <a href="#" class="boton <?php if ($pagina_actual == 'Nosotros.php') { echo 'activo'; } ?>">Nosotros</a>
+            <a href="php/cerrar_sesion.php" class= "boton">Cerrar Sesión</a>
+    </div>
+</section>
+</body>
+</html>

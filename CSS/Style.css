@@ -1,0 +1,851 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: black;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+body {
+    font-family: "Caprasimo", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 200px; /* Ajusta según la altura real del nav */
+    background-image: url(../Images/Fondoinicio.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ .contenedor-layout{
+    display: flex;  
+    gap: 10px;
+    padding: 1px;
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+
+ .imagen-izquierda{
+    width: 200px;
+    max-width: 100%;
+    height: auto; 
+    flex-shrink: 0;
+    display: block;
+}
+
+.texto-derecha {
+    flex-grow: 1;
+    min-width: 0;
+    color: white;
+ }
+
+ .texto-derecha h1{
+    color: white;
+    background-color: black;
+    font-size: 6rem;
+    margin: 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+ }
+
+@media screen and (max-width: 768px) {
+    .contenedor-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .imagen-izquierda {
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+    .texto-derecha h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .texto-derecha h1 {
+        font-size: 1.8rem;
+    }
+    .imagen-izquierda {
+        width: 120px;
+    }
+    .contenedor-layout {
+        padding: 10px;
+        gap: 10px;
+    }
+}
+
+.botones{
+    padding-left: 10%;
+    gap: 20px;
+    font-size: 20px;
+    position: fixed;
+    top: 205px;
+    z-index: 1001;
+}
+
+.botones > a {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.botones > a:hover {
+    background-color: white;
+    color: rgb(145, 8, 8);
+}
+
+.boton.activo {
+    background-color: white;
+    color: rgb(145, 8, 8);
+    border-bottom: 2px solid rgb(145, 8, 8);
+}
+
+.hero-section {
+    min-height: 1200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+
+.presentacion {
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    padding: 10px;
+}
+
+.boton {
+    padding: 0px;
+    gap: 25px;
+    padding: 0px 60px;
+}
+
+.titulo-presentacion {
+    font-size: 60px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: 0px ;
+    padding: 10px;
+}
+
+.Gif-presentacion {
+    width: 55%;
+    height: 40%;
+}
+
+.manga-anime {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 20px;
+background-color: rgba(0, 0, 0, 0.9);
+overflow: hidden;
+max-width: 100%;
+margin: auto;
+width: 100%;
+padding: 20px;
+background-image: url(../Images/Fondomangaanime.jpg);
+background-size: cover; 
+background-position: top;   
+background-repeat: no-repeat;
+}
+
+.anime-manga{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    border: 0px;
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.anime-manga-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    text-shadow: 1px 1px 0 #000,  /* Arriba izquierda */
+         2px 1px 0 #000,  /* Arriba derecha */
+        1px  2px 0 #000,  /* Abajo izquierda */
+         2px  2px 0 #000;  /* Abajo derecha */;
+}
+
+.anime-manga-container > p.anime-manga1 {
+    font-size: 1.7rem;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+    color: white;
+    padding: 0;
+}
+
+.anime-manga-container li.anime-manga1 {
+    list-style: disc;
+    line-height: 1.4;
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+
+}
+
+.An-Man{
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
+    margin-top: 0;
+    margin-left: 10%;
+    order: 2;
+    align-self: flex-start;
+    border-radius: 20%;
+}
+
+.Productos{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    border: 0px;
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-shadow: 4px 4px 0 #000,  /* Arriba izquierda */
+         5px 4px 0 #000,  /* Arriba derecha */
+        4px  5px 0 #000,  /* Abajo izquierda */
+         5px  5px 0 #000;  /* Abajo derecha */;
+         background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Productos-carrusel-contenedor{
+    width: 100%;
+    max-width: none;
+    margin: 5px 0;
+    padding: 20px 0;
+    background-image: url(../Images/Fondomaderamangas.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.producto-tarjeta{
+    min-width: 200px;
+    max-width: 300px;
+    width: 100%;
+    background-image: url(../Images/Fondomaderamangas.jpeg);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.producto-tarjeta img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.producto-tarjeta h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.producto-tarjeta .precio {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.producto-tarjeta button {
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.producto-tarjeta button:hover{
+    background-color: rgb(165, 165, 165);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: none !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    border-color: white;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: white !important;
+    
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 5px;
+}
+
+.swiper-button-next img,
+.swiper-button-prev img {
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: none !important;
+    display: none;
+}
+
+.swiper{
+    padding: 0 60px;
+}
+
+.swiper-mySwiper {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-next, .swiper-button-prev {
+        top: 50%;
+        transform: translate(-50%);
+        margin-top: 0;
+    }
+    .swiper-button-next{
+        right: 0px;
+    }
+    .swiper-button-prev{
+        left: 0px;
+    }
+}
+
+ .swiper-pagination-bullet-active {
+    background-color: #ffd700 !important; 
+ }
+
+@media (max-width: 1023px) {
+    .swiper-wrapper .swiper-slide {
+        width: calc(100% / 3 - 30px);
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper-wrapper .swiper-slide {
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media (max-width: 479px) {
+    .swiper-wrapper .swiper-slide {
+        width: calc(100% / 1 - 10px);
+    }
+}
+
+.Mas{
+   color: white;
+   background-color: red !important;
+   margin: 20px auto;
+   padding: 10px 15px;
+   border-radius: 5px;
+   text-align: center;
+   width: fit-content;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Mas a{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    text-shadow: 4px 4px 0 #000,  /* Arriba izquierda */
+         5px 4px 0 #000,  /* Arriba derecha */
+        4px  5px 0 #000,  /* Abajo izquierda */
+         5px  5px 0 #000;  /* Abajo derecha */;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.Mas:hover{
+    background-color: rgb(165, 165, 165);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.footer{
+    background-color: #000;
+    color: white;
+    padding: 5px 20px 5px 10px;
+    padding-bottom: 40px;
+}
+
+.contacto{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.redes_sociales{
+    background-color: #121111;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+    flex-wrap: wrap;
+}
+
+.redes_sociales > img{
+    display: block;
+    margin: 0 auto;
+}
+
+.redes_sociales > p{
+    text-align: center;
+    margin: 1em;
+}
+
+.facebook,
+.twitter,
+.Youtube{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.facebook a img,
+.twitter a img,
+.Youtube a img{
+    max-width: 60px !important;
+    height: auto;
+}
+
+.Ropa_manga{
+    width: 100%;
+    min-height: 100vh;
+    margin: 30px 0px 70px;
+    padding: 2rem;
+    background-image: url(../Images/Fondoropa.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.2rem;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Ropa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    gap: 9rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width:80rem;
+    padding: 1.5rem;
+    
+}
+
+@media (min-width: 640px) { /* Small screens (sm) */
+            .Ropa {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+            }
+        }
+
+        @media (min-width: 1024px) { /* Large screens (lg) */
+            .Ropa {
+                grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+            }
+        }
+
+.Prenda_tarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    size: 200px;
+    width: 100%;
+}
+
+.Prenda_tarjeta:hover {
+    transform: translateY(-16px);
+}
+
+.Prenda_tarjeta p{
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: rgb(226, 0, 0);
+    border-color: black 50px 50px 50px 50px;
+    text-align: center;
+    margin-top: 0.5rem;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.Prenda_tarjeta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 0.5rem;
+}
+
+.Mas_ropa{
+   color: white;
+   background-color: red !important;
+   margin: auto;
+   padding: 10px 15px;
+   border-radius: 5px;
+   text-align: center;
+   width: fit-content;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   grid-column: 1 / -1;
+   justify-self: center;
+}
+
+.Mas_ropa a{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    text-shadow: 4px 4px 0 #000,  /* Arriba izquierda */
+         5px 4px 0 #000,  /* Arriba derecha */
+        4px  5px 0 #000,  /* Abajo izquierda */
+         5px  5px 0 #000;  /* Abajo derecha */;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.Mas_ropa:hover{
+    background-color: rgb(165, 165, 165);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.Ropa > a {
+            display: block; 
+            width: 100%; 
+            height: 100%; 
+            text-decoration: none; 
+            color: inherit; 
+           
+            background-color: #ffffff; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+        }
+
+.Fondo_productos{
+    background-image: url(../Images/Fondoproductos.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 1200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+.texto_productos {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.5rem;
+}
+
+.Manga-productos,
+.Ropa-productos,
+.Figuras-productos {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    max-width: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Manga-productos h2,
+.Ropa-productos h2,
+.Figuras-productos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.Manga-productos > p,
+.Ropa-productos > p,
+.Figuras-productos > p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Mangas,
+.Ropas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    height: calc(2 * 340px + 50px);    
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Figuras {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+    height: calc(2 * 320px + 30px);    
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Manga_tarjeta,
+.Ropa_tarjeta,
+.Figuras_tarjeta {
+    background: transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 320px;
+}
+
+.Manga_tarjeta img,
+.Ropa_tarjeta img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.Figuras_tarjeta img {
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.Manga_tarjeta .precio-manga {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white; 
+            margin-bottom: 10px;
+        }
+
+
+.Ropa_tarjeta .precio-prenda {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white; 
+            margin-bottom: 5px;
+        }
+
+.Figuras_tarjeta .precio-figura {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white; 
+            margin-bottom: 5px;
+            margin-top: 1px;
+        }
+
+
+.Manga_tarjeta button {
+            background-color: #9c0606; /* Color azul para el botón */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: auto;
+        }
+
+.Ropa_tarjeta button {
+            background-color: #9c0606; /* Color azul para el botón */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 5px;
+        }
+
+.Figuras_tarjeta button {
+            background-color: #9c0606; /* Color azul para el botón */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 1px;
+        }
+
+#prevManga, #nextManga,
+#prevPrenda, #nextPrenda,
+#prevFigura, #nextFigura {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            width: fit-content;
+            align-self: center;
+        }
+
+@media (min-width: 1200px) { /* Para pantallas grandes, colocar los dos sliders uno al lado del otro */
+            body {
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
+
+ @media (max-width: 768px) {
+            .Manga-productos,
+            .Ropa-productos,
+            .Figuras-productos {
+                max-width: 100%;
+                margin: 10px;
+                padding: 15px;
+            }
+            .Mangas,
+            .Ropa,
+            .Figuras {
+                grid-template-columns: repeat(2, 1fr);
+                height: calc(3 * 315px + 2 * 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .Manga-productos,
+            .Ropa-productos,
+            .Figuras-productos {
+                max-width: 95%;
+            }
+            .Mangas,
+            .Ropa,
+            .Figuras {
+                grid-template-columns: repeat(1, 1fr);
+                height: calc(6 * 315px + 5 * 30px);
+            }
+        }
+
+.Copy{
+    text-align: center;
+    justify-content: center;
+}
+
+/* Estilos para la página contenido */
+
+.body-contenido{
+    background-image: url(../Images/Fondo\ contenido.webp);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
