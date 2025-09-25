@@ -849,3 +849,28 @@ background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.titulo-seccion {
+    text-align: center;
+    color: #f5f1f1;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding-top: 20px;
+}
+ 
+ .video-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    width: 100vw;        /* Ocupa todo el ancho de la pantalla */
+    height: 100vh;       /* Opcional: que la altura ocupe toda la pantalla */
+    margin: 0;
+    padding: 0;
+}
+
+.video-container video {
+    width: 100%;        /* Cada video ocupa todo su espacio en la celda */
+    height: 100%;       /* Se adapta a la altura */
+    object-fit: cover;  /* Recorta el video si es necesario para llenarlo */
+    border: none;
+}
