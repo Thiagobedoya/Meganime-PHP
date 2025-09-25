@@ -869,8 +869,8 @@ background-repeat: no-repeat;
 }
 
 .video-container video {
-    width: 100%;        /* Cada video ocupa todo su espacio en la celda */
-    height: 100%;       /* Se adapta a la altura */
+    width: 80%;        /* Cada video ocupa todo su espacio en la celda */
+    height: 50%;       /* Se adapta a la altura */
     object-fit: cover;  /* Recorta el video si es necesario para llenarlo */
     border: none;
 }
